@@ -1,9 +1,9 @@
 package choreography.with.idempotency.common;
 
-import choreography.with.idempotency.ProductApplication;
+import choreography.with.idempotency.InventoryApplication;
 import io.cucumber.spring.CucumberContextConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @CucumberContextConfiguration
-@SpringBootTest(classes = { ProductApplication.class })
+@SpringBootTest(classes = { InventoryApplication.class })
 public class CucumberSpingConfiguration {}

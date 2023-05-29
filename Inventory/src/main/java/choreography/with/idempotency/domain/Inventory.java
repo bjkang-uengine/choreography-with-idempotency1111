@@ -1,6 +1,6 @@
 package choreography.with.idempotency.domain;
 
-import choreography.with.idempotency.ProductApplication;
+import choreography.with.idempotency.InventoryApplication;
 import choreography.with.idempotency.domain.StockDecreaseFailed;
 import choreography.with.idempotency.domain.StockDecreased;
 import choreography.with.idempotency.domain.StockIncreased;
@@ -45,7 +45,7 @@ public class Inventory {
     }
 
     public static InventoryRepository repository() {
-        InventoryRepository inventoryRepository = ProductApplication.applicationContext.getBean(
+        InventoryRepository inventoryRepository = InventoryApplication.applicationContext.getBean(
             InventoryRepository.class
         );
         return inventoryRepository;

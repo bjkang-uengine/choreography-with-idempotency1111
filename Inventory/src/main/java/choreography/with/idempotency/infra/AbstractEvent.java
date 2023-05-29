@@ -1,6 +1,6 @@
 package choreography.with.idempotency.infra;
 
-import choreography.with.idempotency.ProductApplication;
+import choreography.with.idempotency.InventoryApplication;
 import choreography.with.idempotency.config.kafka.KafkaProcessor;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -31,7 +31,7 @@ public class AbstractEvent {
         /**
          * spring streams 방식
          */
-        KafkaProcessor processor = ProductApplication.applicationContext.getBean(
+        KafkaProcessor processor = InventoryApplication.applicationContext.getBean(
             KafkaProcessor.class
         );
         MessageChannel outputChannel = processor.outboundTopic();

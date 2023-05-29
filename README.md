@@ -1,7 +1,7 @@
 # 
 
 ## Model
-www.msaez.io/#/courses/cna-full/e2e218b0-de58-11ed-9611-096ca70ed857/pubsub-choreography-with-idempotency
+www.msaez.io/#/storming/choreography-with-idempotency11111
 
 ## Before Running Services
 ### Make sure there is a Kafka server running
@@ -22,7 +22,7 @@ See the README.md files inside the each microservices directory:
 
 - order
 - delivery
-- product
+- Inventory
 
 
 ## Run API Gateway (Spring Gateway)
@@ -40,7 +40,7 @@ mvn spring-boot:run
 ```
  http :8088/deliveries orderId="orderId" productId="productId" productName="productName" qty="qty" customerId="customerId" address="address" status="status" 
 ```
-- product
+- Inventory
 ```
  http :8088/inventories id="id" productName="productName" productImage="productImage" stock="stock" productId="productId" 
 ```
