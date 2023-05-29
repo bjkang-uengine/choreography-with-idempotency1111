@@ -47,6 +47,9 @@ public class Order {
         orderRejected.publishAfterCommit();
     }
 
+    @PreRemove
+    public void onPreRemove() {}
+
     public static OrderRepository repository() {
         OrderRepository orderRepository = OrderApplication.applicationContext.getBean(
             OrderRepository.class
